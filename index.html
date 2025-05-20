@@ -85,3 +85,16 @@
     <button onclick="alert('Банк строится')">Банк</button>
     <button onclick="alert('Эпоха близко')">Эпохи</button>
   </div>
+<script>
+    const tg = window.Telegram.WebApp;
+    tg.expand(); // Разворачиваем Mini App
+
+    let count = 0;
+
+    function clickEssence() {
+      count++;
+      document.getElementById("clicks").innerText = "Кликов: " + count;
+    }
+  </script>
+</body>
+</html>
