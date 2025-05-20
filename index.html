@@ -3,105 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Эссенция Магии</title>
+  <title>Эссенция</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0c0018;
-      color: #d6aaff;
+      background-color: #140c1c;
+      color: #d7bfff;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      padding: 20px;
     }
 
     h1 {
-      text-align: center;
-      font-size: 26px;
-      margin-bottom: 10px;
-      color: #a678ff;
-      text-shadow: 0 0 10px #a678ff;
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 500;
     }
 
     #clicks {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #e0cfff;
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #ccb2ff;
     }
 
     #click-button {
-      display: block;
-      margin: 0 auto;
-      padding: 15px 40px;
-      font-size: 20px;
-      background: linear-gradient(45deg, #b17eff, #834cff);
-      color: white;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: #7a42f4;
       border: none;
-      border-radius: 15px;
-      box-shadow: 0 0 12px #a678ff;
+      color: white;
+      font-size: 26px;
       cursor: pointer;
-      transition: transform 0.1s;
+      transition: background-color 0.2s ease;
     }
 
-    #click-button:active {
-      transform: scale(0.95);
+    #click-button:hover {
+      background-color: #6933d3;
     }
 
     .bottom-bar {
-      background-color: #1a0033;
-      padding: 10px 0;
-      border-top: 2px solid #3b0077;
-      display: flex;
-      justify-content: space-around;
       position: fixed;
       bottom: 0;
       width: 100%;
+      background-color: #1c112d;
+      border-top: 1px solid #2e1d4f;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0;
     }
 
     .bottom-bar button {
       background: none;
       border: none;
-      color: #d6aaff;
-      font-size: 16px;
-      padding: 5px;
+      color: #bda8e6;
+      font-size: 15px;
+      padding: 4px;
       cursor: pointer;
-      transition: color 0.2s;
     }
 
     .bottom-bar button:hover {
-      color: #ffffff;
-      text-shadow: 0 0 5px #a678ff;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <h1>Эссенция Магии</h1>
+  <h1>Эссенция магии</h1>
 
   <div id="clicks">Кликов: 0</div>
 
-  <button id="click-button" onclick="clickEssence()">🔮 Кликнуть</button>
+  <button id="click-button" onclick="clickEssence()">+</button>
 
-  <!-- Нижняя панель кнопок -->
   <div class="bottom-bar">
-    <button onclick="alert('Гильдия скоро будет')">👥 Гильдия</button>
-    <button onclick="alert('Свитки в разработке')">📜 Свитки</button>
-    <button onclick="alert('Банк откроется позже')">🏦 Банк</button>
-    <button onclick="alert('Эпохи начнутся скоро')">🏆 Эпохи</button>
+    <button onclick="alert('Гильдия скоро откроется')">Гильдия</button>
+    <button onclick="alert('Свитки скоро появятся')">Свитки</button>
+    <button onclick="alert('Банк строится')">Банк</button>
+    <button onclick="alert('Эпоха близко')">Эпохи</button>
   </div>
-<script>
-    const tg = window.Telegram.WebApp;
-    tg.expand(); // на весь экран
-
-    let count = 0;
-
-    function clickEssence() {
-      count++;
-      document.getElementById("clicks").innerText = "Кликов: " + count;
-    }
-  </script>
-</body>
-</html>
